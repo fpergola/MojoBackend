@@ -1,0 +1,5 @@
+export AWS_REGION=us-west-2
+export ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
+export PROJECT_NAME=mojo-instruments-backend
+export REPO_NAME=mojo-instruments-backend-ingest
+export ECR_URI=$ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$REPO_NAME
